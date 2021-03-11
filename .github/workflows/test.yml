@@ -33,11 +33,10 @@ jobs:
       run: echo "::set-output name=respuesta::${MENSAJE_ERROR}"
     - name: Validar resultado sin errores
       if: ${{ success() }}
-      uses: "pascalgn/automerge-action@cf2cae1565eec38838cc6de4da4674d5a9d0b721"
-      env:
-        MENSAJE_EXITO: No fashó nada. Crack
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        MERGE_LABELS: ""
+      uses: "pascalgn/automerge-action@4536e8847eb62fe2f0ee52c8fa92d17aa97f932f"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: ""
     - name: Cálculo de cubrimiento
       id: cubrimiento
       run: |
