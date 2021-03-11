@@ -33,7 +33,7 @@ jobs:
       run: echo "::set-output name=respuesta::${MENSAJE_ERROR}"
     - name: Validar resultado sin errores
       if: ${{ success() }}
-      uses: "ayrtonpastor/automerge-action@cf2cae1565eec38838cc6de4da4674d5a9d0b721"
+      uses: "pascalgn/automerge-action@cf2cae1565eec38838cc6de4da4674d5a9d0b721"
       env:
         MENSAJE_EXITO: No fashó nada. Crack
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
